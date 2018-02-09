@@ -25,6 +25,4 @@ This folder contains the JSON source files for the Omnis library in Github.
 
 To restore these files in Omnis Studio, click 'Libraries' in the Studio Browser, then click 'New Lib from JSON'. In the import dialog, navigate to this source folder (containing library.json), then specify a different location for the new Library. Click on Import and open the library in the Studio Browser.
 
-Before importing, ensure you have loaded the OSpell2 library and installed the required external components.
-
 To test your builds, simply replace the library with the identical name in the downloaded folders, with the ones you have just build.
