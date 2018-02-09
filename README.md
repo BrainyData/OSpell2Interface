@@ -8,11 +8,11 @@ If you do not have them, demo versions are available at https://www.brainydata.c
 
 The specific downloads are:
 
-https://www.brainydata.com/demos/software/jsowrite_examples.zip
+https://www.brainydata.com/demos/software/owrite_document_manager.zip
 https://www.brainydata.com/demos/software/jsowrite_demo_software_mac.zip
 https://www.brainydata.com/demos/software/jsowrite_demo_software_win.zip
 
-These downloads include additional example libraries and files that are not required.
+These downloads may include additional example libraries and files that are not required.
 
 Please refer to the online documentation for further information.
 https://www.brainydata.com/supportpublic/documentation.htm
