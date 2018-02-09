@@ -1,0 +1,9 @@
+Calculate path as $clib.$pathname
+Do FileOps.$splitpathname(path,drive,path,file,ext)
+;  X917 (path,drive,path)
+Calculate path as con(drive,path)
+Calculate pathSep as mid(path,len(path),1)
+
+Calculate ivLangLexPath as con(path,'LANG_LEX',pathSep)
+Calculate ivUserLexPath as con(path,'USER_LEX',pathSep)
+Calculate ivOptionsFile as con(path,'ospell2.cfg')

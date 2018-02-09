@@ -1,0 +1,35 @@
+;  this method is called by the external when the current language is changed
+;  set language dependent spell checker options     ;; chg04OCT06
+
+Switch pLangID
+	Case kSpllLangAM,kSpllLangBR     ;; English
+		Calculate options.$splitcontractedwords as kFalse
+		Calculate options.$splitwords as kFalse
+		Calculate openEnglishCorrectLex as kTrue     ;; CHANGE_16MAR2009_1
+	Case kSpllLangFR,kSpllLangIT     ;; French and Italian
+		Calculate options.$splitcontractedwords as kTrue
+		Calculate options.$splitwords as kFalse
+	Case kSpllLangGE,kSpllLangFI     ;; German and Finnish
+		Calculate options.$splitcontractedwords as kFalse
+		Calculate options.$splitwords as kTrue
+	Case kSpllLangDU
+		Calculate options.$splitcontractedwords as kFalse
+		Calculate options.$splitwords as kTrue
+	Default     ;; please add cases for languages as required
+		Calculate options.$splitcontractedwords as kFalse
+		Calculate options.$splitwords as kFalse
+End Switch
+;  open or close the english auto correct dictionary     ;; CHANGE_16MAR2009_1 begins
+;  it can cause problems with some languages
+Do Spll.$getlexid('CORRECT.TLX') Returns id
+If openEnglishCorrectLex
+	If not(id)
+		Do Spll.$openuserlex('CORRECT.TLX')
+	End If
+Else
+	If id
+		Do Spll.$closeuserlex(id)
+	End If
+End If     ;; CHANGE_16MAR2009_1 ends
+;  update spell checker
+Do options.$update()

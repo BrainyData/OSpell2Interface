@@ -1,0 +1,319 @@
+{
+	"classtype": "kObjectclass",
+	"internalversion": 3,
+	"superclass": ".Spll.SpllHandler",
+	"designtaskname": "Startup_Task",
+	"cvardefs": [
+		{
+			"name": "kStrErr1",
+			"order": 3,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Too many sessions.'"
+		},
+		{
+			"name": "kStrErr100",
+			"order": 25,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Internal OMNIS error $3'"
+		},
+		{
+			"name": "kStrErr101",
+			"order": 26,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Unknown method called.'"
+		},
+		{
+			"name": "kStrErr102",
+			"order": 27,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Insufficient parameters passed to method.'"
+		},
+		{
+			"name": "kStrErr103",
+			"order": 28,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Out of memory.'"
+		},
+		{
+			"name": "kStrErr104",
+			"order": 29,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Spell checker options have an invalid format.'"
+		},
+		{
+			"name": "kStrErr105",
+			"order": 30,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Dictionary not found.'"
+		},
+		{
+			"name": "kStrErr106",
+			"order": 31,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'$endcheckblock called without call to $startcheckblock'"
+		},
+		{
+			"name": "kStrErr107",
+			"order": 32,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'$startcheckblock called without call to $endcheckblock'"
+		},
+		{
+			"name": "kStrErr109",
+			"order": 2,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'The serial number has expired'"
+		},
+		{
+			"name": "kStrErr110",
+			"order": 33,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Start glossary call without field'",
+			"desc": "mpm160105_1"
+		},
+		{
+			"name": "kStrErr12",
+			"order": 12,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Out of memory.'"
+		},
+		{
+			"name": "kStrErr13",
+			"order": 13,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Unsupported action.'"
+		},
+		{
+			"name": "kStrErr14",
+			"order": 14,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Dictionary already exists.'"
+		},
+		{
+			"name": "kStrErr15",
+			"order": 15,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Too many open text blocks.'"
+		},
+		{
+			"name": "kStrErr16",
+			"order": 16,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Bad text block ID.'"
+		},
+		{
+			"name": "kStrErr17",
+			"order": 17,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Cancel error.'"
+		},
+		{
+			"name": "kStrErr19",
+			"order": 18,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Invalid word.'"
+		},
+		{
+			"name": "kStrErr2",
+			"order": 4,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Bad session ID.'"
+		},
+		{
+			"name": "kStrErr20",
+			"order": 19,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Word out of sequence.'"
+		},
+		{
+			"name": "kStrErr22",
+			"order": 20,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Error when reading from file.'"
+		},
+		{
+			"name": "kStrErr23",
+			"order": 21,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Error when writing to file.'"
+		},
+		{
+			"name": "kStrErr24",
+			"order": 22,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Error when opening file.'"
+		},
+		{
+			"name": "kStrErr25",
+			"order": 23,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'File busy error.'"
+		},
+		{
+			"name": "kStrErr26",
+			"order": 24,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Dictionary is in unknown format.'"
+		},
+		{
+			"name": "kStrErr3",
+			"order": 5,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Word not found.'"
+		},
+		{
+			"name": "kStrErr4",
+			"order": 6,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'File not found.'"
+		},
+		{
+			"name": "kStrErr5",
+			"order": 7,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Too many open dictionaries.'"
+		},
+		{
+			"name": "kStrErr6",
+			"order": 8,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Unknown action.'"
+		},
+		{
+			"name": "kStrErr7",
+			"order": 9,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Bad dictionary ID.'"
+		},
+		{
+			"name": "kStrErr8",
+			"order": 10,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Buffer to small.'"
+		},
+		{
+			"name": "kStrErr9",
+			"order": 11,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'The dictionary is read only.'"
+		},
+		{
+			"name": "kStrErrorText",
+			"order": 1,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Spell checker error in $1.//$2:  '"
+		}
+	],
+	"ivardefs": [
+		{
+			"name": "ivLastError",
+			"order": 1,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0
+		},
+		{
+			"name": "ivMemLexHandler",
+			"order": 2,
+			"type": "kItemref",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "ivReplaceField",
+			"order": 3,
+			"type": "kItemref",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "ivSelectField",
+			"order": 4,
+			"type": "kItemref",
+			"subtype": "",
+			"sublen": 0
+		}
+	],
+	"properties": {
+		"collectperformancedata": false,
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"createdate": "2010-04-23 14:07:38",
+		"desc": "Main Spell-Check handler",
+		"editor": "",
+		"editordata": "",
+		"external": true,
+		"issupercomponent": false,
+		"moddate": "2018-02-09 09:29:00",
+		"selfcontained": false,
+		"showascheckedout": true,
+		"userinfo": "",
+		"version": "4.40.00"
+	}
+}

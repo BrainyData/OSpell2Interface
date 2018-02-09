@@ -1,0 +1,5 @@
+Do method initialize
+If ivMemLexHandler
+	Calculate haveMemLexHandler as kTrue
+End If
+Do $clib.$windows.wLexManager.$openonce('*',kWindowCenter,$cinst,haveMemLexHandler)

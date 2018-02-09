@@ -1,0 +1,19 @@
+
+;  store active field and first key recipient references
+Set reference refActiveField to pField
+Set reference refFirstKeyRecipient to pFirstKeyRecipient
+
+;  attach active field to glossary object (replaces previous field)
+;  - best time to call this is on evBefore (no other calls required)     ;; CHANGE_2014_06_11__1
+Calculate $cinst.$hwnd as refActiveField.$framehwnd
+Calculate ivIsOWrite as (refActiveField.$objtype=kComponent)&(refActiveField.$componentlib="OWrite")
+
+;  make sure our glossary list is loaded
+If pLoadGlossary
+	Do method loadGlossaryList
+Else
+	Do method unloadGlossaryList
+End If
+
+;  enable first key handling if requested
+Calculate $cinst.$sendfirstkey as pEnableFirstKey

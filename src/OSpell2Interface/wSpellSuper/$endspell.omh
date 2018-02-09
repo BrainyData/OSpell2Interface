@@ -1,0 +1,21 @@
+;  called when spell check for specified field is complete
+;  $endspell(pFieldRef [Item Reference])
+
+
+;  implement fix for OWrite fields that use $dataname     ;; CHANGE_2014_06_11__2 begins
+;  this is required as the interactive check causes an evAfter and evBefore to be sent
+;  to the OWrite field, saving data on the evAfter and re-applying the saved data on the evBefore
+;  unfortunatly the interactive spell check applies corrections in between these two events
+;  which are discarded when Omnis sends the previous saved data to OWrite on the evBefore
+
+;  the only way to correct this is to manually save the data to our field name when spell check has completed
+;  so when we receive the evBefore, Omnis has the right data
+If pFieldRef.$componentlib='OWrite'&pFieldRef.$datanametype<>kWriFmtUnassigned
+	;  save the data
+	Do pFieldRef.$savedata(data,pFieldRef.$datanametype,kFalse)
+	;  for file format variables we need to do this
+	Calculate [con($cinst.$lib().$name,'.',pFieldRef.$dataname)] as data
+	;  for instance/class variables we need to do this
+	Calculate $cwind.[pFieldRef.$dataname] as data
+End If
+;       ;; CHANGE_2014_06_11__2 ends

@@ -1,0 +1,30 @@
+Switch pMode
+	Case kModeChange,kSpllRsltMisspelledWord,kSpllRsltMixedDigitsWord,kSpllRsltUncappedWord
+		Enable fields {Suggestions,Ignore,IgnoreAll,Add,Change,ChangeAll}
+		Disable fields {Undo}
+		Calculate ivObjChange.$text as kStrButtChange
+		Calculate ivObjAdd.$text as kStrButtAdd
+		Calculate ivObjSentence.$keyevents as kTrue
+		Calculate ivButtonMode as kModeChange
+	Case kModeSuggest,kSpllRsltAutoChangeWord,kSpllRsltCondChangeWord
+		Enable fields {Suggestions,Ignore,IgnoreAll,Add,Change,ChangeAll}
+		Disable fields {Undo}
+		Calculate ivObjChange.$text as kStrButtChange
+		Calculate ivObjAdd.$text as kStrButtSuggest
+		Calculate ivObjSentence.$keyevents as kTrue
+		Calculate ivButtonMode as kModeSuggest
+	Case kModeDelete,kSpllRsltDoubledWord
+		Enable fields {Ignore,Change}     ;; CHANGE_17JUN08_1
+		Disable fields {Suggestions,IgnoreAll,Add,ChangeAll,Undo}     ;; CHANGE_17JUN08_1
+		Calculate ivObjChange.$text as kStrButtDelete
+		Calculate ivObjAdd.$text as kStrButtAdd
+		Calculate ivObjSentence.$keyevents as kTrue
+		Calculate ivButtonMode as kModeDelete
+	Case kModeContinue
+		Enable fields {Change,Undo}
+		Disable fields {Suggestions,Ignore,IgnoreAll,Add,ChangeAll}
+		Calculate ivObjChange.$text as kStrButtContinue
+		Calculate ivObjAdd.$text as kStrButtAdd
+		Calculate ivObjSentence.$keyevents as kFalse
+		Calculate ivButtonMode as kModeContinue
+End Switch

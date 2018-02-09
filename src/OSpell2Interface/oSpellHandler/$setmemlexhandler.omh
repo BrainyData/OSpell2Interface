@@ -1,0 +1,2 @@
+;  call this method to specify object that is to receive memory (dictionary) related messages ($loadmemlex, $savememlex)
+Set reference ivMemLexHandler to pMemLexHandler

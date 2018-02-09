@@ -1,0 +1,5 @@
+Set reference ivOSpellObj to pOSpellObj.$ref
+Calculate ivCreateMemLex as pCreateMemLex
+Do method buildLexLists
+Calculate ivLangList as ivOSpellObj.$getlanguagelist
+Do ivLangList.$redefine(ivLanguageName)

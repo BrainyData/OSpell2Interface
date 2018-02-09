@@ -1,0 +1,27 @@
+{
+	"ident": 1025,
+	"order": 16390,
+	"objtype": "kLabel",
+	"properties": {
+		"align": "kLeftJst",
+		"backcolor": "kColor3DFace",
+		"backpattern": 15,
+		"designactive": true,
+		"edgefloat": "kEFnone",
+		"fieldstyle": "CtrlLabel",
+		"font": 1,
+		"fontsize": 0,
+		"fontstyle": "kPlain",
+		"forecolor": "kColor3DFace",
+		"height": 13,
+		"left": 2,
+		"objlink": 33685505,
+		"text": "Replacement Word",
+		"textcolor": "kColorWindowText",
+		"top": 2,
+		"userinfo": "",
+		"vertcentertext": false,
+		"visible": true,
+		"width": 160
+	}
+}

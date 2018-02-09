@@ -1,0 +1,306 @@
+{
+	"classtype": "kObjectclass",
+	"internalversion": 3,
+	"designtaskname": "Startup_Task",
+	"cvardefs": [
+		{
+			"name": "kAnyList",
+			"order": 22,
+			"type": "kInteger",
+			"subtype": "kShortint",
+			"sublen": 0,
+			"initval": "0"
+		},
+		{
+			"name": "kStrCheckComplete",
+			"order": 1,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'The spelling check is complete'"
+		},
+		{
+			"name": "kStrLangAM",
+			"order": 2,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 32,
+			"initval": "'American English'"
+		},
+		{
+			"name": "kStrLangAny",
+			"order": 21,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 32,
+			"initval": "'any language'"
+		},
+		{
+			"name": "kStrLangBR",
+			"order": 3,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 32,
+			"initval": "'British English'"
+		},
+		{
+			"name": "kStrLangCZ",
+			"order": 4,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 32,
+			"initval": "'Czechoslovakian'"
+		},
+		{
+			"name": "kStrLangDA",
+			"order": 5,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 32,
+			"initval": "'Danish'"
+		},
+		{
+			"name": "kStrLangDU",
+			"order": 6,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 32,
+			"initval": "'Dutch'"
+		},
+		{
+			"name": "kStrLangFI",
+			"order": 7,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 32,
+			"initval": "'Finnish'"
+		},
+		{
+			"name": "kStrLangFR",
+			"order": 8,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 32,
+			"initval": "'French'"
+		},
+		{
+			"name": "kStrLangGE",
+			"order": 9,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 32,
+			"initval": "'German'"
+		},
+		{
+			"name": "kStrLangHU",
+			"order": 10,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 32,
+			"initval": "'Hungarian'"
+		},
+		{
+			"name": "kStrLangIT",
+			"order": 11,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 32,
+			"initval": "'Italian'"
+		},
+		{
+			"name": "kStrLangNB",
+			"order": 12,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 32,
+			"initval": "'Norwegian Bokmal'"
+		},
+		{
+			"name": "kStrLangNO",
+			"order": 13,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 32,
+			"initval": "'Norwegian Nynorsk'"
+		},
+		{
+			"name": "kStrLangPB",
+			"order": 14,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 32,
+			"initval": "'Portuguese Brazil'"
+		},
+		{
+			"name": "kStrLangPL",
+			"order": 15,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 32,
+			"initval": "'Polish'"
+		},
+		{
+			"name": "kStrLangPO",
+			"order": 16,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 32,
+			"initval": "'Portuguese Iberian'"
+		},
+		{
+			"name": "kStrLangRU",
+			"order": 17,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 32,
+			"initval": "'Russian'"
+		},
+		{
+			"name": "kStrLangSC",
+			"order": 18,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 32,
+			"initval": "'Catalan'"
+		},
+		{
+			"name": "kStrLangSP",
+			"order": 19,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 32,
+			"initval": "'Spanish'"
+		},
+		{
+			"name": "kStrLangSW",
+			"order": 20,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 32,
+			"initval": "'Swedish'"
+		}
+	],
+	"ivardefs": [
+		{
+			"name": "ivInitialized",
+			"order": 1,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0
+		},
+		{
+			"name": "ivLangLexPath",
+			"order": 2,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "ivLanguageCode",
+			"order": 8,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 2
+		},
+		{
+			"name": "ivLanguageFile",
+			"order": 6,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "ivLanguageID",
+			"order": 7,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0
+		},
+		{
+			"name": "ivLanguageList",
+			"order": 5,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "ivLanguageName",
+			"order": 9,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 32
+		},
+		{
+			"name": "ivMemLexHandler",
+			"order": 15,
+			"type": "kItemref",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "ivMenu",
+			"order": 10,
+			"type": "kItemref",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "ivMenuCount",
+			"order": 13,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "ivOptionsFile",
+			"order": 4,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "ivSpellWind",
+			"order": 11,
+			"type": "kItemref",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "ivSpellWindOpen",
+			"order": 12,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0
+		},
+		{
+			"name": "ivTitle",
+			"order": 14,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "ivUserLexPath",
+			"order": 3,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		}
+	],
+	"properties": {
+		"collectperformancedata": false,
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"createdate": "2010-04-23 14:07:38",
+		"desc": "Main Spell-Check object",
+		"editor": "",
+		"editordata": "",
+		"external": true,
+		"issupercomponent": false,
+		"moddate": "2018-02-09 09:29:00",
+		"selfcontained": false,
+		"showascheckedout": true,
+		"userinfo": "",
+		"version": "4.40.00"
+	}
+}

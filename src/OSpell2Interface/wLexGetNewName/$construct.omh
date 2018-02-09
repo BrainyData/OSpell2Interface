@@ -1,0 +1,20 @@
+Calculate ivLexName as pLexName
+Calculate $cinst.$objs.CreateMemLex.$enabled as pCreateMemLex
+While 1
+	Enter data
+	If flag true
+		Do pManager.$doeslexexist(con(ivLexName,'.TLX')) Returns exists
+		If exists
+			OK message Error (Icon,Sound bell) {[kStrAlreadyInUse]}
+		Else
+			Calculate pLexName as con(ivLexName,'.TLX')
+			Calculate pCanceled as kFalse
+			Break to end of loop
+		End If
+	Else
+		Calculate pCanceled as kTrue
+		Break to end of loop
+	End If
+End While
+Calculate pCreateMemLex as clCreateMemLex
+Do $cinst.$close()

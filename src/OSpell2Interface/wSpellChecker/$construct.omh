@@ -1,0 +1,3 @@
+Set reference ivOSpellObj to pOSpellObj.$ref
+Do Spll.$getopenuserlexlist(ivUserLexList)
+Do ivUserLexList.$redefine(ivLexName,ivLexID)

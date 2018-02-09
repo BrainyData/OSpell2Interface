@@ -1,0 +1,5 @@
+;  set data of cell in list
+;  $setlistcell(pList [Item reference],pUserData [Number Long integer],pSpellData [Field reference])
+Calculate curRow as pUserData/256
+Calculate curCol as mod(pUserData,256)
+Calculate pList.[curRow].[curCol] as pSpellData

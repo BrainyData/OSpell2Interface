@@ -1,0 +1,11 @@
+Do ivSuggestions.$define(ivSuggWord)
+Switch ivSpllResult
+	Case kSpllRsltAutoChangeWord,kSpllRsltCondChangeWord,kSpllRsltMixedCaseWord,kSpllRsltUncappedWord
+		Do ivSuggestions.$add(ivSession.$replaceword)
+	Case kSpllRsltDoubledWord
+		;  nothing to do here
+	Case kSpllRsltMisspelledWord
+		Do ivSession.$suggest(ivSuggestions)
+End Switch
+Calculate ivSuggestions.$line as 1
+Redraw (Refresh now) {Suggestions}

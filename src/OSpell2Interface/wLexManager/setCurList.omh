@@ -1,0 +1,28 @@
+If pWhich=kAnyList
+	If not(ivClosedList.$linecount)&ivOpenList.$linecount
+		Calculate pWhich as kOpenList
+	Else
+		Calculate pWhich as kClosedList
+	End If
+End If
+If pWhich=kClosedList
+	Set reference theList to ivClosedList
+	Calculate $cwind.$objs.OpenClose.$text as kStrOpenLeft
+	Calculate $cwind.$objs.Delete.$text as kStrDeleteLeft
+	Calculate $cwind.$objs.Edit.$text as kStrEditLeft
+	Calculate ivOpenList.$line as 0
+	Redraw {OpenList}
+Else
+	Set reference theList to ivOpenList
+	Calculate $cwind.$objs.OpenClose.$text as kStrCloseRight
+	Calculate $cwind.$objs.Delete.$text as kStrDeleteRight
+	Calculate $cwind.$objs.Edit.$text as kStrEditRight
+	Calculate ivClosedList.$line as 0
+	Redraw {ClosedList}
+End If
+Do theList.$loadcols()
+Calculate $cwind.$objs.OpenClose.$enabled as theList.$line>0
+Calculate $cwind.$objs.Delete.$enabled as theList.$line>0
+Calculate $cwind.$objs.Edit.$enabled as theList.$line>0&pos('.TLX',ivLexName)>0
+Calculate $cwind.$objs.Set.$enabled as ivOpenList.$line>0
+Calculate ivCurList as pWhich

@@ -1,0 +1,4 @@
+;  $selecttext(pSelStart,pSelEnd) is called when a misspelled word is to be hilighted     ;; mpm0008 method now overidden
+If ivSelectField
+	Do ivSelectField.$selecttext(pSelStart,pSelEnd)
+End If

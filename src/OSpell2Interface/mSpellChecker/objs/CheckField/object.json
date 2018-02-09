@@ -1,0 +1,22 @@
+{
+	"ident": 1008,
+	"order": 1,
+	"properties": {
+		"cascade": "",
+		"checked": false,
+		"enabled": false,
+		"fontstyle": "kPlain",
+		"helpfile": 0,
+		"helptext": "",
+		"iconid": 10001,
+		"macshortcutkey": "F7",
+		"text": {
+			"type": 0,
+			"calc": "Check Field..."
+		},
+		"unixshortcutkey": "F7",
+		"userinfo": "",
+		"users": "12345678",
+		"winshortcutkey": "F7"
+	}
+}

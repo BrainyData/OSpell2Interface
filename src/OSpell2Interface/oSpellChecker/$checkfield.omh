@@ -1,0 +1,46 @@
+Do method initialize
+If pTheField.$componentlib='OWrite'     ;; OWrite will handle checking directly - OWRITE
+	Repeat     ;; mpm11NOV05_2 begins
+		If pIsCheckWindow
+			Do pTheField.$spell(kWriSpllCheckAll,lOWriteContext,lOWriteResult)
+		Else
+			Do pTheField.$spell(kWriSpllCheckSelection,lOWriteContext,lOWriteResult)
+		End If
+		If lOWriteContext
+			Do method $promptspellwindow (pTheField.$spellsession,lOWriteResult,pTheField)
+			Calculate pCanceled as ivSpellWind.$iscancel
+			If isnull(pCanceled)
+				Calculate pCanceled as kFalse
+			End If
+		End If
+	Until pCanceled|(lOWriteContext=0)     ;; mpm11NOV05_2 ends
+	If pCanceled     ;; inform OWrite of the cancel
+		Do pTheField.$spell(kWriSpllCancel,lOWriteContext)
+	End If
+	If pCloseWindow
+		Do method $endcheck (not(pCanceled))
+	End If
+Else
+	Repeat
+		Do pTheWindow.$getspelldata(pTheField,theData,selFirst,selLast,userData,pIsCheckWindow) Returns more
+		If len(theData)
+			If selFirst<selLast
+				Calculate theDataCopy as theData
+				Calculate theData as mid(theData,selFirst+1,selLast-selFirst)
+			End If
+			Do method $checkdata (theData,pCanceled,pCloseWindow) Returns dataChanged
+			If dataChanged
+				If selFirst<selLast
+					Calculate theData as con(mid(theDataCopy,1,selFirst),theData,mid(theDataCopy,selLast+1,10000000))
+					;  EAS 20081023: There was a "bug" where the number of selected characters remained constant even if the new value was larger/smaller than the value it replaced
+					;  EAS 20081023: ...we chose to position the cursor before the selected data although choice could also have been to place at the end or reselect the updated data
+					;  EAS 20081023: Added; after replacing value, reset the first/last selected positions to match (place cursor at the start of the field)
+					Calculate selLast as selFirst     ;; CHANGE_13FEB09_2
+				End If
+				Do pTheWindow.$setspelldata(pTheField,theData,selFirst,selLast,userData)
+			End If
+			Calculate theData as ''
+		End If
+	Until not(more)|pCanceled
+End If
+Do pTheWindow.$endspell(pTheField)     ;; inform window that spell check for field is complete // mpm0008

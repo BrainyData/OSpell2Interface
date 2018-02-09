@@ -1,0 +1,8 @@
+;  close our global objects     ;; CHANGE_2014_06_11__1
+Do tvSpellChecker.$deleteref()
+Do tvSpellGlossary.$deleteref()
+Do tvSpellHandler.$deleteref()
+
+;  if the library is closed, unload the spell checker to free up memory
+;  this will close all dictionaries
+Do Spll.$unload()

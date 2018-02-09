@@ -1,0 +1,9 @@
+On evClick     ;; Event Parameters - pRow( Itemreference )
+	Switch ivButtonMode
+		Case kModeSuggest
+			Calculate ivSpllResult as kSpllRsltMisspelledWord
+			Do method setSuggestions
+			Do method setButtonMode (kModeChange)
+		Default
+			Do method doAction (kActAdd)
+	End Switch

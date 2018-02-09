@@ -1,0 +1,24 @@
+;  return data of next cell in list
+;  $nextlistcell(pList [Item reference],pUserData [Field reference],pSpellData [Field reference])
+If pUserData     ;; retrieve row and column
+	Calculate curRow as pUserData/256
+	Calculate curCol as mod(pUserData,256)
+Else     ;; start at the beginning
+	Calculate curRow as 1
+	Calculate curCol as 0
+End If
+While 1
+	Calculate curCol as curCol+1
+	If curCol>pList.$colcount     ;; check if we have reached the end of the row
+		Calculate curRow as curRow+1
+		Calculate curCol as 1
+	End If
+	If curRow>pList.$linecount     ;; check if we have reached the end of the list
+		Quit method kFalse
+	End If
+	If pList.$cols.[curCol].$coltype=kCharacter     ;; we are only interested in columns of type text
+		Calculate pSpellData as pList.[curRow].[curCol]
+		Calculate pUserData as curRow*256+curCol
+		Quit method (curRow<pList.$linecount)|(curCol<pList.$colcount)     ;; if we have reached the last cell we want to tell the caller
+	End If
+End While
