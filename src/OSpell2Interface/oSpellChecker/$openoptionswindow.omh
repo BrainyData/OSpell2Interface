@@ -1,2 +1,0 @@
-Do method initialize
-Do $clib.$windows.wSpellOptions.$openonce('*',kWindowCenter,$cinst)

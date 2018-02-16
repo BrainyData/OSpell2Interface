@@ -1,2 +1,0 @@
-;  the given field will be called when $replacetext is called by spell checker     ;; mpm0008 new method
-Set reference ivReplaceField to pReplaceField

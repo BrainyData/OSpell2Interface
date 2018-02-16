@@ -1,5 +1,0 @@
-
-If (ivGlossaryAssigned)
-	Calculate $cinst.$glossary as #NULL
-	Calculate ivGlossaryAssigned as kFalse
-End If

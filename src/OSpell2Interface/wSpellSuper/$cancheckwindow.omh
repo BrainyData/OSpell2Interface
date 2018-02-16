@@ -1,3 +1,0 @@
-;  check if window can be spell checked
-;  $cancheckwindow()
-Quit method $cinst.$enterable

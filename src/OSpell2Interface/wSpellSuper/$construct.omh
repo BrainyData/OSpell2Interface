@@ -1,3 +1,0 @@
-;  if you override this method make sure you call 'Do inherited' at some point
-
-Set reference ivOSpellObj to $root.$libs.OSPELL2.$objects.oSpellChecker.$insts.$first().$ref

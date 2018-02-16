@@ -1,6 +1,0 @@
-Do method initialize
-If pIsMemory
-	Do ivMemLexHandler.$memlexdelete(pLexName)
-Else
-	Do FileOps.$deletefile(con(ivUserLexPath,pLexName))
-End If

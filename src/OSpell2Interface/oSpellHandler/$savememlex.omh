@@ -1,5 +1,0 @@
-;  $savememlex(pLexName,pLexID) is called when a memory dictionay is altered and the dictionay needs to be saved
-Do Spll.$readuserlex(pLexID,lexLangID,lexWordList)
-If $cinst.ivMemLexHandler
-	Do $cinst.ivMemLexHandler.$memlexsave(pLexName,lexLangID,lexWordList)
-End If

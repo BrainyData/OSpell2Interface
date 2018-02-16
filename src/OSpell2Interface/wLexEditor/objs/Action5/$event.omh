@@ -1,2 +1,0 @@
-On evClick     ;; Event Parameters - pRow ( Itemreference )
-	Quit event handler (Pass to next handler)

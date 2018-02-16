@@ -1,5 +1,0 @@
-Do method $openspellwindow (kTrue)     ;; CHANGE_16JAN07_1: Open window with OWrite field
-Do ivSpellWind.$prompt(pSession,ivTitle,pResult,canceled)
-If canceled     ;; inform OWrite
-	Do pOWrite.$spell(kWriSpllCancel)
-End If

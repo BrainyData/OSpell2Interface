@@ -1,4 +1,0 @@
-;  Inherited from .Spll.SpllGlossary
-;  $word(word) called when a word has been completed
-;  the property $cinst.$text returns the word that was typed
-;  the property $cinst.$othertext returns the replacement

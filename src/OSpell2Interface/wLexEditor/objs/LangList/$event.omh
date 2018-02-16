@@ -1,3 +1,0 @@
-On evClick
-	Calculate ivModified as kTrue
-	Do ivLangList.$loadcols()

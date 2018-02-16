@@ -1,3 +1,0 @@
-On evClick     ;; Event Parameters - pRow( Itemreference )
-	Calculate ivCancel as kTrue
-	Calculate ivDone as kTrue

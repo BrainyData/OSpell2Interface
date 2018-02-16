@@ -1,5 +1,0 @@
-On evKey
-	Process event and continue
-	If $cobj.$contents<>ivSentence
-		Do method setButtonMode (kModeContinue)
-	End If

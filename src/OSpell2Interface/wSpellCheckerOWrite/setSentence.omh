@@ -1,6 +1,0 @@
-Calculate ivSentence as ivSession.$blocksentence
-Do ivObjSentence.$loaddata(ivSentence,kWriFmtText)
-
-Calculate ivObjSentence.$firstsel as ivSession.$sentenceselstart
-Calculate ivObjSentence.$lastsel as ivSession.$sentenceselend
-Calculate ivObjSentence.$curfontcolor as kRed

@@ -1,8 +1,0 @@
-On evClick     ;; Event Parameters - pRow( Itemreference )
-	If ivCurList=kClosedList
-		Do ivClosedList.$loadcols()
-		Calculate ivLexID as 0
-	Else
-		Do ivOpenList.$loadcols()
-	End If
-	Do ivOSpellObj.$openlexeditorwindow(ivLexID,ivLexName,ivLexType=kSpllLexTypeMemory)

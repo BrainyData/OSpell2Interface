@@ -1,3 +1,0 @@
-;  Inherited from .Spll.SpllGlossary
-;  $evaluatetext() evaluate $othertext and insert in editor
-Calculate $cinst.$othertext as eval($cinst.$othertext)

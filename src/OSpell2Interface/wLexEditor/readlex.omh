@@ -1,6 +1,0 @@
-Do ivWordList.$define(ivWord,ivReplaceWord,ivAction)
-Do Spll.$readuserlex(ivLexID,ivLangID,ivWordList)
-Do ivWordList.$add('','',kSpllActIgnore)
-Calculate ivWordList.$line as ivWordList.$linecount
-Calculate langID as ivLangID
-Do ivLangList.$search($ref.ivLangID=langID,kTrue,kFalse,kFalse,kFalse)

@@ -1,6 +1,0 @@
-If ivInitialized
-	Quit method kFalse
-Else
-	Calculate ivUserLexPath as pPath
-	Quit method kTrue
-End If

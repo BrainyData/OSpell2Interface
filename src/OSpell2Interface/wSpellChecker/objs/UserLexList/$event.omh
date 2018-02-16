@@ -1,3 +1,0 @@
-On evClick
-	Do ivUserLexList.$loadcols()
-	Do Spll.$setcuruserlex(ivLexID)

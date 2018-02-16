@@ -1,7 +1,0 @@
-Do method initialize
-If pIsMemoryLex
-	Do Spll.$creatememlex(pLexName) Returns lexID
-Else
-	Do Spll.$openuserlex(pLexName) Returns lexID
-End If
-Quit method lexID

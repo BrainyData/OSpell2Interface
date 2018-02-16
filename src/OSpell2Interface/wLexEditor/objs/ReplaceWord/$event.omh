@@ -1,2 +1,0 @@
-On evAfter     ;; Event Parameters - pClickedField, pClickedWindow, pMenuLine, pCommandNumber, pRow
-	Quit event handler (Pass to next handler)

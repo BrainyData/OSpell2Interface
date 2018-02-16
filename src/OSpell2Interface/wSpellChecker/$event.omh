@@ -1,5 +1,0 @@
-;  clicks on close box must finish our enter data correctly     ;; change 1AUG2005_1 begins
-On evCloseBox
-	Calculate ivCancel as kTrue
-	Calculate ivDone as kTrue
-	Quit event handler (Discard event)     ;; change 1AUG2005_1 ends

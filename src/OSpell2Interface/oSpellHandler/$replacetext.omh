@@ -1,4 +1,0 @@
-;  $replacetext(pSelStart,pSelEnd,pNewText) is called when a misspelled word is to be replaced     ;; mpm0008 method now overidden
-If ivReplaceField
-	Do ivReplaceField.$replacetext(pSelStart,pSelEnd,pNewText)
-End If

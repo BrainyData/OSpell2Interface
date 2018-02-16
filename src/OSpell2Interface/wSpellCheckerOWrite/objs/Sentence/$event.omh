@@ -1,8 +1,0 @@
-On evAfter
-	Do $cobj.$savedata(ivSentence,kWriFmtText,kFalse,kWriTextSaveSpecialChars,kTrue)
-On evKey
-	Process event and continue
-	Do $cobj.$savedata(contents,kWriFmtText,kFalse,kWriTextSaveSpecialChars,kTrue)
-	If contents<>ivSentence
-		Do method setButtonMode (kModeContinue)
-	End If

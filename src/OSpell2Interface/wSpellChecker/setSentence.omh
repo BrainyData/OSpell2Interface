@@ -1,4 +1,0 @@
-Calculate ivSentence as ivSession.$blocksentence
-Redraw (Refresh now) {Sentence}
-Calculate ivObjSentence.$firstsel as ivSession.$sentenceselstart
-Calculate ivObjSentence.$lastsel as ivSession.$sentenceselend

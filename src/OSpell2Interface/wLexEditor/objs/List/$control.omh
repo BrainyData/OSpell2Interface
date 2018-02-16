@@ -1,6 +1,0 @@
-On evClick
-	Calculate ivModified as kTrue
-On evAfter
-	If #MODIFIED
-		Calculate ivModified as kTrue
-	End If
