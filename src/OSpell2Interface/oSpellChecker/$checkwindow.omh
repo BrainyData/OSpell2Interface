@@ -1,0 +1,45 @@
+Do method initialize
+Set reference theParent to pTheWindow
+Repeat
+	If theField     ;; get the next field
+		Set reference theField to theParent.$objs.$next(theField)
+	Else     ;; get the first field
+		Set reference theField to theParent.$objs.$first()
+	End If
+	If theField
+		Switch theField.$objtype     ;; if the field is a container we want to check the children
+			Case kPagedPane,kScrollbox,kSubwindow,kTabPane
+				Set reference theParent to theField
+				Set reference theField to #NULL
+				Jump to start of loop
+		End Switch
+		Switch theParent.$objtype     ;; for paged pane and tab pane objects we only want to check objects of the current page
+			Case kPagedPane
+				If theParent.$panenumber(theField)<>theParent.$currentpage
+					Jump to start of loop
+				End If
+			Case kTabPane
+				If theParent.$panenumber(theField)<>theParent.$currenttab
+					Jump to start of loop
+				End If
+		End Switch
+		If pTheWindow.$cancheckfield(theField,kTrue)     ;; CHANGE_2014_06_11__6
+			Do method $checkfield (pTheWindow,theField,canceled,kFalse,kTrue)
+			If canceled
+				Do method $endcheck (not(canceled))
+				Quit method
+			End If
+		End If
+	Else     ;; we have reached the end of the current container, go up one level
+		If theParent=pTheWindow
+			Do method $endcheck (not(canceled))
+			Quit method
+		End If
+		Set reference theField to theParent
+		If theParent.$container
+			Set reference theParent to theParent.$container
+		Else
+			Set reference theParent to pTheWindow
+		End If
+	End If
+Until kFalse

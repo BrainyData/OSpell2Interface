@@ -1,0 +1,15 @@
+;  set data and selection of field
+;  $setspelldata(pFieldRef [Item reference],pSpellData [Field reference], pFirstSel [Number Long integer],pLastSel [Number Long integer],pUserData [Number Long integer])
+Switch pFieldRef.$objtype
+	Case kEntry,kMultilineEntry     ;; deal with simple edit controls
+		;  for file format variables we need to do this
+		Calculate [con($cinst.$lib().$name,'.',pFieldRef.$dataname)] as pSpellData
+		;  for instance/class variables we need to do this
+		Calculate $cwind.[pFieldRef.$dataname] as pSpellData
+		;  update the fields contents and selection
+		Calculate pFieldRef.$contents as pSpellData
+		Calculate pFieldRef.$firstsel as pFirstSel
+		Calculate pFieldRef.$lastsel as pLastSel
+		Quit method kTrue
+End Switch
+Quit method kFalse

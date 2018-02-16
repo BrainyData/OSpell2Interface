@@ -1,0 +1,5 @@
+;  Inherited from .Spll.SpllGlossary
+;  $endreplace() this method is called when the glossary has just replaced a word
+If ivIsOWrite
+	Do refActiveField.$endundo('Glossary')
+End If

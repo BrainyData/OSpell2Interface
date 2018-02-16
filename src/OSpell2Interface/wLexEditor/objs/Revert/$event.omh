@@ -1,0 +1,4 @@
+On evClick     ;; Event Parameters - pRow( Itemreference )
+	Do method readlex
+	Redraw {List,LangList}
+	Calculate ivModified as kFalse

@@ -1,0 +1,6 @@
+If ivInitialized
+	Quit method kFalse
+Else
+	Calculate ivLangLexPath as pPath
+	Quit method kTrue
+End If

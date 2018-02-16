@@ -1,0 +1,16 @@
+Set reference ivSession to pSession.$ref
+Calculate ivSpllResult as pSpllResult
+If len(pTitle)
+	Calculate $cinst.$title as pTitle
+Else
+	Calculate $cinst.$title as kStrTitle
+End If
+;  initialize window fields
+Do method setSentence
+Do method setSuggestions
+Do method setPrompt (ivSpllResult)
+Do method setButtonMode (ivSpllResult)
+Calculate $cinst.$ctarget as ivObjSentence
+Calculate ivDone as kFalse
+Enter data  until ivDone
+Calculate pCanceled as ivCancel

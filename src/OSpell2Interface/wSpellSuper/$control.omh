@@ -1,0 +1,6 @@
+;  keep spell menu up to date, you must make sure that you do
+;  Quit event handler (Pass to next handler)
+;  if you implement the events evBefore in your field's $event methods
+;  and you must do 'Do inherited' at some point if you override this method
+On evBefore
+	Do $imenus.mSpellChecker.$setmenu(kTrue)     ;; CHANGE_19NOV08_1

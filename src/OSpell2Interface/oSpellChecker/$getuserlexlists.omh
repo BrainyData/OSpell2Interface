@@ -1,0 +1,36 @@
+;  get list of open and closed dictionaries
+Do Spll.$getopenuserlexlist(pOpenList)
+Do pOpenList.$redefine(lexName,lexID,lexType)
+Calculate curLex as pOpenList.$line
+;  get list of dictionaries on disk
+Do FileOps.$filelist(kFileOpsIncludeFiles,ivUserLexPath,kFileOpsInfoName+kFileOpsInfoSize) Returns pClosedList
+Do pClosedList.$redefine(lexName,lexType)
+;  set the lex types for closed dictionaries
+Set reference row to pClosedList.$first()
+While row
+	If pos('.CLX',row.lexName)
+		Calculate row.lexType as kSpllLexTypeCompiled
+	Else If pos('.TLX',row.lexName)
+		Calculate row.lexType as kSpllLexTypeText
+	Else
+		Calculate row.$selected as kTrue     ;; mark file to be removed
+	End If
+	Set reference row to pClosedList.$next(row)
+End While
+;  remove selected rows
+Do pClosedList.$remove(kListDeleteSelected)
+Calculate pClosedList.$line as 0
+;  call memory dictionary handler to add memory dictionaries to list
+If ivMemLexHandler
+	Do ivMemLexHandler.$memlexappendlist(pClosedList)
+End If
+;  remove open dictionaries from closed list
+Set reference row to pOpenList.$first()
+While row
+	Do pClosedList.$search($ref.lexName=row.lexName,kTrue,kFalse,kFalse,kFalse)
+	If pClosedList.$line
+		Do pClosedList.$remove(pClosedList.$line)
+	End If
+	Set reference row to pOpenList.$next(row)
+End While
+Calculate pOpenList.$line as curLex

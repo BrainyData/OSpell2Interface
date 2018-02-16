@@ -1,0 +1,11 @@
+Calculate savedLine as ivClosedList.$line
+Calculate ivClosedList.$line as 0
+Do ivClosedList.$search($ref.ivLexName=pLexName,kTrue,kFalse,kFalse,kFalse) Returns result
+Calculate ivClosedList.$line as savedLine
+If not(result)
+	Calculate savedLine as ivOpenList.$line
+	Calculate ivOpenList.$line as 0
+	Do ivOpenList.$search($ref.ivLexName=pLexName,kTrue,kFalse,kFalse,kFalse) Returns result
+	Calculate ivOpenList.$line as savedLine
+End If
+Quit method result>0

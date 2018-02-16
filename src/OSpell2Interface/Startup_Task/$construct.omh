@@ -1,0 +1,2 @@
+;  allow other libraries to use classes in this library
+Calculate $clib.$ignoreexternal as kTrue

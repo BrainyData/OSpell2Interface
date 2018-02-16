@@ -1,0 +1,8 @@
+If pAskWindow
+	Set reference windowRef to $topwind
+	Calculate $cinst.$objs.CheckWindow.$enabled as windowRef.$cancheckwindow
+	Calculate $cinst.$objs.CheckField.$enabled as windowRef.$cancheckfield(windowRef.$ctarget)
+Else
+	Calculate $cinst.$objs.CheckWindow.$enabled as kFalse
+	Calculate $cinst.$objs.CheckField.$enabled as kFalse
+End If

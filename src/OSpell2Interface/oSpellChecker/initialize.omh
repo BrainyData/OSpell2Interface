@@ -1,0 +1,7 @@
+If not(ivInitialized)
+	Calculate ivInitialized as kTrue
+	Do method buildLanguageList
+	Do Spll.$setlanglexpath(ivLangLexPath)
+	Do Spll.$setuserlexpath(ivUserLexPath)
+	Do method $loadoptions
+End If

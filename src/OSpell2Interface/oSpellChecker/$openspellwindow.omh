@@ -1,0 +1,9 @@
+If not(ivSpellWindOpen)
+	Calculate ivSpellWindOpen as kTrue
+	If pForOWrite     ;; CHANGE_16JAN07_1 begins
+		Do $clib.$windows.wSpellCheckerOWrite.$openonce('*',kWindowCenter,$cinst) Returns ivSpellWind
+	Else
+		Do $clib.$windows.wSpellChecker.$openonce('*',kWindowCenter,$cinst) Returns ivSpellWind
+	End If     ;; CHANGE_16JAN07_1 ends
+End If
+Quit method ivSpellWind

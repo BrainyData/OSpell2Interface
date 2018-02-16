@@ -1,0 +1,7 @@
+On evBefore
+	If ivFirst
+		Calculate ivFirst as kFalse
+		Calculate ivWordList.$line as ivWordList.$linecount
+		Redraw {List}
+		Queue set current field {Word}
+	End If

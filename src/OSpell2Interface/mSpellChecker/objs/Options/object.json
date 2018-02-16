@@ -1,0 +1,22 @@
+{
+	"ident": 1011,
+	"order": 4,
+	"properties": {
+		"cascade": "",
+		"checked": false,
+		"enabled": true,
+		"fontstyle": "kPlain",
+		"helpfile": 0,
+		"helptext": "",
+		"iconid": 0,
+		"macshortcutkey": "Opt+F7",
+		"text": {
+			"type": 0,
+			"calc": "Options..."
+		},
+		"unixshortcutkey": "Alt+F7",
+		"userinfo": "",
+		"users": "12345678",
+		"winshortcutkey": "Alt+F7"
+	}
+}

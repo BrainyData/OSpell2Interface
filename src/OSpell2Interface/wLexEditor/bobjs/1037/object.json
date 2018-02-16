@@ -1,0 +1,27 @@
+{
+	"ident": 1037,
+	"order": 16400,
+	"objtype": "kLabel",
+	"properties": {
+		"align": "kLeftJst",
+		"backcolor": "kColor3DFace",
+		"backpattern": 15,
+		"designactive": true,
+		"edgefloat": "kEFnone",
+		"fieldstyle": "CtrlLabel",
+		"font": 1,
+		"fontsize": 0,
+		"fontstyle": "kPlain",
+		"forecolor": "kColor3DFace",
+		"height": 13,
+		"left": 8,
+		"objlink": 0,
+		"text": "Auto Change (preserve case)",
+		"textcolor": "kColorWindowText",
+		"top": 61,
+		"userinfo": "",
+		"vertcentertext": false,
+		"visible": true,
+		"width": 160
+	}
+}

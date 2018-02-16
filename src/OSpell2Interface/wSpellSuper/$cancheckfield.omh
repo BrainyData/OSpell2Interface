@@ -1,0 +1,11 @@
+;  check if field can be spell checked
+;  $cancheckfield(pFieldRef [Item reference])
+If $cinst.$enterable
+	Switch pFieldRef.$objtype
+		Case kEntry,kMultilineEntry
+			Quit method kTrue
+		Case kComponent
+			Quit method pFieldRef.$componentlib="OWrite"
+	End Switch
+End If
+Quit method kFalse

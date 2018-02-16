@@ -1,0 +1,13 @@
+If not(ivLanguageList.$linecount)
+	Do FileOps.$filelist(kFileOpsIncludeFiles,ivLangLexPath,kFileOpsIncludeFiles,'*.CLX') Returns tmpList
+	Do tmpList.$redefine(ivLanguageFile)
+	Do ivLanguageList.$define(ivLanguageName,ivLanguageCode)
+	Set reference row to tmpList.$first()
+	While row
+		Calculate ivLanguageCode as upp(mid(row.ivLanguageFile,5,2))
+		Calculate ivLanguageName as fld(con('kStrLang',ivLanguageCode))
+		Do ivLanguageList.$add()
+		Set reference row to tmpList.$next(row)
+	End While
+	Calculate ivLanguageList.$line as 0
+End If

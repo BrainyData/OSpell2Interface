@@ -1,0 +1,26 @@
+Do method initialize
+If ivLanguageList.$line=pRow
+	Quit method
+End If
+;  close open language dictionaries
+Do Spll.$getopenlanglexlist(tmpList)
+Do tmpList.$redefine(ivLanguageFile,ivLanguageID)
+Set reference row to tmpList.$first()
+While row
+	Do Spll.$closelanglex(row.ivLanguageID)
+	Set reference row to tmpList.$next(row)
+End While
+;  set the new language
+Calculate ivLanguageList.$line as pRow
+Do ivLanguageList.$loadcols()
+Do Spll.$setlanguage(fld(con('kSpllLang',ivLanguageCode)))
+;  Do Spll.$setlanguage(kSpllLangAny)     ;; this allows all open dictionaries to be used, regardless of their language ID
+;  open dictionaries for the language
+Calculate mask as con('SSCE',ivLanguageCode,'*.*')
+Do FileOps.$filelist(kFileOpsIncludeFiles,ivLangLexPath,kFileOpsIncludeFiles,mask) Returns tmpList
+Do tmpList.$redefine(ivLanguageFile)
+Set reference row to tmpList.$first()
+While row
+	Do Spll.$openlanglex(row.ivLanguageFile)
+	Set reference row to tmpList.$next(row)
+End While

@@ -1,0 +1,3 @@
+;  must initrialize the spell checker
+Do $ctask.tvOSpellObj.$init
+Do $cinst.$casesensitive.$assign(kTrue)

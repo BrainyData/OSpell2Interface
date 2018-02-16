@@ -1,0 +1,3 @@
+If ivLexIsClosed
+	Do ivOSpellObj.$closeuserlex(ivLexID)
+End If

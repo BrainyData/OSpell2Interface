@@ -1,0 +1,6 @@
+On evClick     ;; Event Parameters - pRow( Itemreference )
+	Open window instance wLexGetNewName/CEN (theName,createMemLex,canceled,$cinst)
+	If not(canceled)
+		Do ivOSpellObj.$createuserlex(theName,createMemLex)
+		Do method buildLexLists
+	End If

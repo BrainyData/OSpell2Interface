@@ -1,0 +1,5 @@
+;  $loadmemlex(pLexName,pLexID) is called when a memory dictionary is opened and the dictionay needs to be loaded
+If $cinst.ivMemLexHandler
+	Do $cinst.ivMemLexHandler.$memlexload(pLexName,lexLangID,lexWordList)
+End If
+Do Spll.$writeuserlex(pLexID,lexLangID,lexWordList)

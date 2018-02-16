@@ -1,0 +1,255 @@
+[
+	{
+		"name": "$construct",
+		"ident": 1,
+		"order": 1,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$destruct",
+		"ident": 12,
+		"order": 2,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$initialize",
+		"ident": 13,
+		"order": 3,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$setfield",
+		"ident": 0,
+		"order": 4,
+		"pvardefs": [
+			{
+				"name": "pField",
+				"order": 1,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1,
+				"desc": "the active field"
+			},
+			{
+				"name": "pFirstKeyRecipient",
+				"order": 8,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0,
+				"param": 2,
+				"desc": "reference to object that is to be called on a $firstkey event (pFirstKeyRecipient.$firstkey will be called)"
+			},
+			{
+				"name": "pLoadGlossary",
+				"order": 2,
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 3,
+				"initval": "kTrue",
+				"desc": "are we to load the glossary"
+			},
+			{
+				"name": "pEnableFirstKey",
+				"order": 3,
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 4,
+				"initval": "kFalse",
+				"desc": "enable first key handling"
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "isCalc",
+				"order": 6,
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0
+			},
+			{
+				"name": "key",
+				"order": 7,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "otherWord",
+				"order": 5,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "word",
+				"order": 4,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			}
+		]
+	},
+	{
+		"name": "$--- overridden methods ---",
+		"ident": 10,
+		"order": 5,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		],
+		"empty": true
+	},
+	{
+		"name": "$firstkey",
+		"ident": 9,
+		"order": 6,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$word",
+		"ident": 4,
+		"order": 7,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$inserttext",
+		"ident": 2,
+		"order": 8,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$evaluatetext",
+		"ident": 3,
+		"order": 9,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+			{
+				"name": "c",
+				"order": 1,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			}
+		]
+	},
+	{
+		"name": "$beginreplace",
+		"ident": 5,
+		"order": 10,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$endreplace",
+		"ident": 6,
+		"order": 11,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "--- private methods ---",
+		"ident": 11,
+		"order": 12,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		],
+		"empty": true
+	},
+	{
+		"name": "loadGlossaryList",
+		"ident": 7,
+		"order": 13,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+			{
+				"name": "isCalc",
+				"order": 3,
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0
+			},
+			{
+				"name": "key",
+				"order": 4,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "otherWord",
+				"order": 2,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "word",
+				"order": 1,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			}
+		]
+	},
+	{
+		"name": "unloadGlossaryList",
+		"ident": 8,
+		"order": 14,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	}
+]

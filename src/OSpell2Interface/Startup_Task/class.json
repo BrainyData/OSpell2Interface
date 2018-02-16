@@ -1,0 +1,51 @@
+{
+	"classtype": "kTask",
+	"internalversion": 3,
+	"tvardefs": [
+		{
+			"name": "tvSpellChecker",
+			"order": 3,
+			"type": "kObjectref",
+			"subtype": "oSpellChecker",
+			"sublen": 0,
+			"desc": "global object when using multiple libraries CHANGE_2014_06_11__1"
+		},
+		{
+			"name": "tvSpellGlossary",
+			"order": 1,
+			"type": "kObjectref",
+			"subtype": "oSpellGlossary",
+			"sublen": 0,
+			"desc": "global object when using multiple libraries CHANGE_2014_06_11__1"
+		},
+		{
+			"name": "tvSpellHandler",
+			"order": 2,
+			"type": "kObjectref",
+			"subtype": "oSpellHandler",
+			"sublen": 0,
+			"desc": "global object when using multiple libraries CHANGE_2014_06_11__1"
+		}
+	],
+	"cvardefs": [
+
+	],
+	"ivardefs": [
+
+	],
+	"properties": {
+		"collectperformancedata": false,
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"createdate": "2010-04-23 14:07:38",
+		"desc": "",
+		"editor": "",
+		"editordata": "",
+		"external": false,
+		"issupercomponent": false,
+		"moddate": "2018-02-09 09:29:00",
+		"showascheckedout": true,
+		"userinfo": "",
+		"version": "4.41.00"
+	}
+}

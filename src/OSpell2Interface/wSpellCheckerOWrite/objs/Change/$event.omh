@@ -1,0 +1,9 @@
+On evClick     ;; Event Parameters - pRow( Itemreference )
+	Switch ivButtonMode
+		Case kModeChange,kModeSuggest
+			Do method doAction (kActChange)
+		Case kModeContinue
+			Do method doAction (kActContinue)
+		Case kModeDelete
+			Do method doAction (kActDelete)
+	End Switch

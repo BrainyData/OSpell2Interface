@@ -1,0 +1,3 @@
+;  if you override this method you must make sure you do 'Do inherited' at some point
+
+Do $imenus.mSpellChecker.$setmenu(kFalse)     ;; CHANGE_19NOV08_1

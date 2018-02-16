@@ -1,0 +1,389 @@
+{
+	"classtype": "kWindow",
+	"internalversion": 4,
+	"designtaskname": "Startup_Task",
+	"nextident": 1031,
+	"lastgroupident": 0,
+	"cvardefs": [
+		{
+			"name": "kActAdd",
+			"order": 14,
+			"type": "kInteger",
+			"subtype": "kShortint",
+			"sublen": 0,
+			"initval": "1"
+		},
+		{
+			"name": "kActChange",
+			"order": 15,
+			"type": "kInteger",
+			"subtype": "kShortint",
+			"sublen": 0,
+			"initval": "2"
+		},
+		{
+			"name": "kActChangeAll",
+			"order": 16,
+			"type": "kInteger",
+			"subtype": "kShortint",
+			"sublen": 0,
+			"initval": "3"
+		},
+		{
+			"name": "kActContinue",
+			"order": 18,
+			"type": "kInteger",
+			"subtype": "kShortint",
+			"sublen": 0,
+			"initval": "4"
+		},
+		{
+			"name": "kActDelete",
+			"order": 17,
+			"type": "kInteger",
+			"subtype": "kShortint",
+			"sublen": 0,
+			"initval": "5"
+		},
+		{
+			"name": "kActIgnore",
+			"order": 12,
+			"type": "kInteger",
+			"subtype": "kShortint",
+			"sublen": 0,
+			"initval": "6"
+		},
+		{
+			"name": "kActIgnoreAll",
+			"order": 13,
+			"type": "kInteger",
+			"subtype": "kShortint",
+			"sublen": 0,
+			"initval": "7"
+		},
+		{
+			"name": "kActUndo",
+			"order": 19,
+			"type": "kInteger",
+			"subtype": "kShortint",
+			"sublen": 0,
+			"initval": "8"
+		},
+		{
+			"name": "kModeChange",
+			"order": 11,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "0"
+		},
+		{
+			"name": "kModeContinue",
+			"order": 9,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "-1"
+		},
+		{
+			"name": "kModeDelete",
+			"order": 10,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "-2"
+		},
+		{
+			"name": "kModeSuggest",
+			"order": 20,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "-3"
+		},
+		{
+			"name": "kStrButtAdd",
+			"order": 21,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Add'"
+		},
+		{
+			"name": "kStrButtChange",
+			"order": 6,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Change'"
+		},
+		{
+			"name": "kStrButtContinue",
+			"order": 8,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Continue'"
+		},
+		{
+			"name": "kStrButtDelete",
+			"order": 7,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Delete'"
+		},
+		{
+			"name": "kStrButtSuggest",
+			"order": 22,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Suggest'"
+		},
+		{
+			"name": "kStrDuplicateWord",
+			"order": 2,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Duplicate word'"
+		},
+		{
+			"name": "kStrMixedCase",
+			"order": 3,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Word contains mixed case'"
+		},
+		{
+			"name": "kStrMixedDigits",
+			"order": 4,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Word contains digits or symbols'"
+		},
+		{
+			"name": "kStrNotInDictionary",
+			"order": 1,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Not in dictionary'"
+		},
+		{
+			"name": "kStrTitle",
+			"order": 23,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Spell Checker'"
+		},
+		{
+			"name": "kStrUncapped",
+			"order": 5,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "'Word is uncapitalized'"
+		}
+	],
+	"ivardefs": [
+		{
+			"name": "ivButtonMode",
+			"order": 11,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "kModeChange"
+		},
+		{
+			"name": "ivCancel",
+			"order": 14,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0
+		},
+		{
+			"name": "ivDone",
+			"order": 12,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0
+		},
+		{
+			"name": "ivLexID",
+			"order": 8,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0
+		},
+		{
+			"name": "ivLexName",
+			"order": 7,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "ivObjAdd",
+			"order": 16,
+			"type": "kItemref",
+			"subtype": "",
+			"sublen": 0,
+			"initval": "$cinst.$objs.Add"
+		},
+		{
+			"name": "ivObjChange",
+			"order": 10,
+			"type": "kItemref",
+			"subtype": "",
+			"sublen": 0,
+			"initval": "$cinst.$objs.Change"
+		},
+		{
+			"name": "ivObjSentence",
+			"order": 4,
+			"type": "kItemref",
+			"subtype": "",
+			"sublen": 0,
+			"initval": "$cinst.$objs.Sentence"
+		},
+		{
+			"name": "ivOSpellObj",
+			"order": 9,
+			"type": "kItemref",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "ivPrompt",
+			"order": 5,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100
+		},
+		{
+			"name": "ivSentence",
+			"order": 1,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "ivSession",
+			"order": 13,
+			"type": "kItemref",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "ivSpllResult",
+			"order": 15,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0
+		},
+		{
+			"name": "ivSuggestions",
+			"order": 2,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "ivSuggWord",
+			"order": 3,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100
+		},
+		{
+			"name": "ivUserLexList",
+			"order": 6,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		}
+	],
+	"properties": {
+		"aligntogrid": false,
+		"alpha": 255,
+		"backcolor": "kColor3DFace",
+		"backgroundskin": 0,
+		"backgroundskinalign": "kPALtopLeft",
+		"backgroundtheme": "kBGThemeWindow",
+		"backpattern": 0,
+		"bringinfront": true,
+		"clickbehind": false,
+		"closebox": true,
+		"collectperformancedata": false,
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"contextmenu": "",
+		"createdate": "2010-04-23 14:07:39",
+		"desc": "Main Spell-Check window with OWrite field",
+		"dockingedge": "kBorderChisel",
+		"dropmode": "kAcceptNone",
+		"edgefloat": "kEFnone",
+		"editor": "",
+		"editordata": "",
+		"effect": "kBorderNone",
+		"enablemenuandtoolbars": false,
+		"external": true,
+		"forecolor": "kColor3DFace",
+		"growbox": true,
+		"hasmenus": false,
+		"hasstatusbar": false,
+		"height": 248,
+		"helpbutton": false,
+		"helpfile": 0,
+		"horzgrid": 8,
+		"horzscroll": false,
+		"inheritedorder": 1,
+		"issubwindow": false,
+		"issupercomponent": false,
+		"keepclicks": true,
+		"left": 228,
+		"menuedge": "kBorderChisel",
+		"menunames": "",
+		"minimizebox": false,
+		"minimizeiconid": 2006,
+		"moddate": "2018-02-09 10:25:38",
+		"modelessdata": true,
+		"showascheckedout": true,
+		"showcommands": false,
+		"showgrid": false,
+		"showtitle": false,
+		"sizetogrid": false,
+		"startfield": 1,
+		"statusbarpos": "kSBPosBottom",
+		"statusedge": "kBorderChisel",
+		"style": "kTitle",
+		"title": {
+			"type": 0,
+			"calc": "Spell Checker"
+		},
+		"toolbarnames": "",
+		"toolbaroptions": "kTBOptionNone",
+		"toolbarpos": "kDockingAreaNone",
+		"top": 197,
+		"userinfo": "",
+		"usesheets": false,
+		"version": "4.00.05",
+		"vertgrid": 8,
+		"vertscroll": false,
+		"width": 441,
+		"zoombox": false
+	},
+	"statusbar": {
+		"properties": {
+			"fieldstyle": "",
+			"font": 1,
+			"fontsize": 0,
+			"helppane": 0
+		}
+	}
+}

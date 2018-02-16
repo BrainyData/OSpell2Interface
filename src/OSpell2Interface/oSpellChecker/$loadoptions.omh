@@ -1,0 +1,14 @@
+If not(ivInitialized)
+	Do method initialize
+	Quit method
+End If
+If FileOps.$doesfileexist(ivOptionsFile)
+	Do Spll.$loadoptions(ivOptionsFile)     ;; load the options from disk
+	Do Spll.$getlanguage() Returns languageID
+	Do ivLanguageList.$search(languageID=fld(con('kSpllLang',$ref.ivLanguageCode))) Returns ivLanguageList.$line
+Else
+	Do method $setlanguage (1)     ;; set language to first available language
+	Do Spll.$openuserlex('USERDIC.TLX') Returns lexID     ;; must always have one user dictionary open
+	Do Spll.$setcuruserlex(lexID)
+	Do method $saveoptions     ;; this will create the options file
+End If

@@ -1,0 +1,8 @@
+If ivSpellWindOpen
+	Calculate ivSpellWindOpen as kFalse
+	Do ivSpellWind.$close()
+	Calculate ivTitle as ''
+End If
+If pShowMessage
+	OK message Message (Sound bell) {[kStrCheckComplete]}
+End If
